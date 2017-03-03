@@ -1,7 +1,13 @@
 <p>
   <strong>Commenter:</strong>
   <%= comment.commenter  %>
+  <%= comment.id %>
+  <!--
+  <%= link_to 'Delete', article_comment_path(comment), method: :delete, data: {confirm: 'Are you sure?'} %>
 </p>
+  -->
+
+  <%= link_to 'Destroy Comment', [comment.article, comment], method: :delete, data: {confirm: 'Are you sure?'} %>
 
 <p>
   <strong>Comment:</strong>
